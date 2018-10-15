@@ -32,9 +32,12 @@ while lineString:
         lineData = lineString.split()
 
         # Extract attributes from the datum header line
-        tagID = lineData[0]
+        tagID = lineData[0]    # tag ID
+        obsDate = lineData[3]  # observation date
+        obsTime = lineData[4]  # observation time
+        obsLC = lineData[7]    # observation location class
 
-        # Extract location info from the next line
+        # Move down to extract location info from the next line
         line2String = inputFileObj.readline()
 
         # Parse the line into a list
@@ -45,12 +48,14 @@ while lineString:
         obsLon = line2Data[5]
 
         # Print results to see how we're doing
-        print(tagID,"Lat:"+obsLat," Long:"+obsLon)
+        print(tagID,"Date: "+obsDate,"Time: "+obsTime,"LC: "+obsLC,"Lat: "+obsLat,"Long: "+obsLon)
 
     # Move to the next line so the while loop progresses
     lineString=inputFileObj.readline()
 
 # Close the file object
 inputFileObj.close()
+
+
         
     
