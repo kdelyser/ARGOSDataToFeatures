@@ -13,6 +13,6 @@
 import sys, os, arcpy
 
 # Set input variables (hard-wired)
-inputFile = "V:/ARGOSTracking/Data/ARGOSData/1997dg.txt"
-outputFC = "V:/ARGOSTracking/Scratch/ARGOStrack.shp"
+inputFile = "V:/ARGOSTracking/data/ARGOSData/1997dg.txt"
+outputFC = "V:/ARGOSTracking/scratch/ARGOSTrack.shp"
 
